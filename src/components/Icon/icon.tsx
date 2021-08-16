@@ -1,14 +1,14 @@
 /*
  * @Author: angel
  * @Date: 2021-08-13 16:22:24
- * @LastEditTime: 2021-08-16 10:25:19
+ * @LastEditTime: 2021-08-16 10:40:36
  * @LastEditors: angel
  * @FilePath: /angel-ui/src/components/icon/icon.tsx
  * @Description:
  */
 import React, { FC } from "react";
 import classNames from "classnames";
-// import "./_style.scss";
+import "./_style.scss";
 import {
   FontAwesomeIcon,
   FontAwesomeIconProps,
