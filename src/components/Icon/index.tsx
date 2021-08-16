@@ -1,11 +1,11 @@
 /*
  * @Author: angel
  * @Date: 2021-08-13 16:22:24
- * @LastEditTime: 2021-08-13 18:34:24
+ * @LastEditTime: 2021-08-16 19:16:41
  * @LastEditors: angel
  * @FilePath: /angel-ui/src/components/icon/index.tsx
- * @Description:
+ * @Description: export
  */
-import { Icon } from "./icon";
+import { Icon } from './icon';
 
 export default Icon;

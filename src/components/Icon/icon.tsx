@@ -1,38 +1,27 @@
 /*
  * @Author: angel
  * @Date: 2021-08-13 16:22:24
- * @LastEditTime: 2021-08-16 10:40:36
+ * @LastEditTime: 2021-08-16 19:17:29
  * @LastEditors: angel
  * @FilePath: /angel-ui/src/components/icon/icon.tsx
- * @Description:
+ * @Description:  https://fontawesome.com/v5.15/how-to-use/on-the-web/using-with/react
  */
-import React, { FC } from "react";
-import classNames from "classnames";
-import "./_style.scss";
-import {
-  FontAwesomeIcon,
-  FontAwesomeIconProps,
-} from "@fortawesome/react-fontawesome";
+import React, { FC } from 'react';
+import classNames from 'classnames';
+import { FontAwesomeIcon, FontAwesomeIconProps } from '@fortawesome/react-fontawesome';
 
-export type testProps = "small" | "medium" | "large";
-
-export interface Props {
-  /**是否禁用 Input */
+export interface IconProps extends FontAwesomeIconProps {
+  /** svg 的 class */
   className?: string;
-  /**设置 Button 的类型 */
-  test?: testProps;
   /** 是否旋转 */
   spin?: boolean;
+  /** 颜色 */
+  color?: string;
 }
 
-export type IconProps = Props & FontAwesomeIconProps;
-
-export const Icon = ({
-  className,
-  test = "small",
-  ...restProps
-}: IconProps) => {
+export const Icon: FC<IconProps> = props => {
+  const { className, ...restProps } = props;
   // icon-primary
-  const classes = classNames("icon", className);
-  return <FontAwesomeIcon className={classes} {...restProps} />;
+  const classes = classNames('icon', className);
+  return <FontAwesomeIcon data-testid="test-icon" className={classes} {...restProps} />;
 };
