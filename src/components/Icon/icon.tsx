@@ -1,16 +1,19 @@
 /*
  * @Author: angel
  * @Date: 2021-08-13 16:22:24
- * @LastEditTime: 2021-08-16 19:17:29
+ * @LastEditTime: 2021-08-17 20:14:15
  * @LastEditors: angel
- * @FilePath: /angel-ui/src/components/icon/icon.tsx
+ * @FilePath: /angel-ui/src/components/Icon/icon.tsx
  * @Description:  https://fontawesome.com/v5.15/how-to-use/on-the-web/using-with/react
  */
 import React, { FC } from 'react';
 import classNames from 'classnames';
 import { FontAwesomeIcon, FontAwesomeIconProps } from '@fortawesome/react-fontawesome';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 export interface IconProps extends FontAwesomeIconProps {
+  /** icon  可以是 ['fab', '500px'] 也可以是 'ad' (默认是 soild 格式)*/
+  icon: IconProp;
   /** svg 的 class */
   className?: string;
   /** 是否旋转 */
@@ -20,8 +23,7 @@ export interface IconProps extends FontAwesomeIconProps {
 }
 
 export const Icon: FC<IconProps> = props => {
-  const { className, ...restProps } = props;
-  // icon-primary
+  const { className, icon, ...restProps } = props;
   const classes = classNames('icon', className);
-  return <FontAwesomeIcon data-testid="test-icon" className={classes} {...restProps} />;
+  return <FontAwesomeIcon icon={icon} data-testid="test-icon" className={classes} {...restProps} />;
 };
