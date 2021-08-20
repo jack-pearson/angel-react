@@ -6,5 +6,6 @@ dist-ssr
 *.log
 *.log.*
 yarn.lock
+.vscode
 package-lock.json
 /.vscode/

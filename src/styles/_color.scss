@@ -1,0 +1,187 @@
+/** 灰色 */
+$gray-1: #F8F9FA !default;
+$gray-2: #E9ECEF !default;
+$gray-3: #DEE2E6 !default;
+$gray-4: #CED4DA !default;
+$gray-5: #ADB5BD !default;
+$gray-6: #6C757D !default;
+$gray-7: #495057 !default;
+$gray-8: #343A40 !default;
+$gray-9: #212529 !default;
+$gray-10: #19191D !default;
+
+/** blue/拂晓蓝 */
+$blue-1: #E6F7FF !default;
+$blue-2: #BAE7FF !default;
+$blue-3: #91D5FF !default;
+$blue-4: #69C0FF !default;
+$blue-5: #40A9FF !default;
+$blue-6: #1890FF !default;
+$blue-7: #096DD9 !default;
+$blue-8: #0050B3 !default;
+$blue-9: #003A8C !default;
+$blue-10: #002766 !default;
+
+/** 紫色 */
+$purple-1: #F9F0FF !default;
+$purple-2: #EFDBFF !default;
+$purple-3: #D3ADF7 !default;
+$purple-4: #B37FEB !default;
+$purple-5: #9254DE !default;
+$purple-6: #722ED1 !default;
+$purple-7: #531DAB !default;
+$purple-8: #391085 !default;
+$purple-9: #22075E !default;
+$purple-10: #120338 !default;
+
+/** cyan/明青 */
+$cyan-1: #E6FFFB !default;
+$cyan-2: #B5F5EC !default;
+$cyan-3: #87E8DE !default;
+$cyan-4: #5CDBD3 !default;
+$cyan-5: #36CFC9 !default;
+$cyan-6: #13C2C2 !default;
+$cyan-7: #08979C !default;
+$cyan-8: #006D75 !default;
+$cyan-9: #00474F !default;
+$cyan-10: #002329 !default;
+
+/** gold/日出 */
+$gold-1: #FEFFE6 !default;
+$gold-2: #FFFFB8 !default;
+$gold-3: #FFFB8F !default;
+$gold-4: #FFF566 !default;
+$gold-5: #FFEC3D !default;
+$gold-6: #FADB14 !default;
+$gold-7: #D4B106 !default;
+$gold-8: #AD8B00 !default;
+$gold-9: #876800 !default;
+$gold-10: #614700 !default;
+
+/** green/极光绿 */
+$green-1: #F6FFED !default;
+$green-2: #D9F7BE !default;
+$green-3: #B7EB8F !default;
+$green-4: #95DE64 !default;
+$green-5: #73D13D !default;
+$green-6: #52C41A !default;
+$green-7: #389E0D !default;
+$green-8: #237804 !default;
+$green-9: #135200 !default;
+$green-10: #092B00 !default;
+
+/** magenta/法式洋红 */
+$magenta-1: #FFF0F6 !default;
+$magenta-2: #FFD6E7 !default;
+$magenta-3: #FF85C0 !default;
+$magenta-4: #F759AB !default;
+$magenta-5: #EB2F96 !default;
+$magenta-6: #EB2F96 !default;
+$magenta-7: #C41D7F !default;
+$magenta-8: #9E1068 !default;
+$magenta-9: #780650 !default;
+$magenta-10: #520339 !default;
+
+/** alias of magenta */
+$pink-1: #FFF0F6 !default;
+$pink-2: #FFD6E7 !default;
+$pink-3: #FF85C0 !default;
+$pink-4: #F759AB !default;
+$pink-5: #EB2F96 !default;
+$pink-6: #EB2F96 !default;
+$pink-7: #C41D7F !default;
+$pink-8: #9E1068 !default;
+$pink-9: #780650 !default;
+$pink-10: #520339 !default;
+
+/** red/薄暮 */
+$red-1: #FFF1F0 !default;
+$red-2: #FFCCC7 !default;
+$red-3: #FFA39E !default;
+$red-4: #FF7875 !default;
+$red-5: #FF4D4F !default;
+$red-6: #F5222D !default;
+$red-7: #CF1322 !default;
+$red-8: #A8071A !default;
+$red-9: #820014 !default;
+$red-10: #5C0011 !default;
+
+/** orange/金盏花 */
+$orange-1: #FFF7E6 !default;
+$orange-2: #FFE7BA !default;
+$orange-3: #FFD591 !default;
+$orange-4: #FFC069 !default;
+$orange-5: #FFA940 !default;
+$orange-6: #FA8C16 !default;
+$orange-7: #D46B08 !default;
+$orange-8: #AD4E00 !default;
+$orange-9: #873800 !default;
+$orange-10: #612500 !default;
+
+/** yellow/日出 */
+$yellow-1: #FFFBE6 !default;
+$yellow-2: #FFF1B8 !default;
+$yellow-3: #FFE58F !default;
+$yellow-4: #FFD666 !default;
+$yellow-5: #FFC53D !default;
+$yellow-6: #FAAD14 !default;
+$yellow-7: #D48806 !default;
+$yellow-8: #AD6800 !default;
+$yellow-9: #874D00 !default;
+$yellow-10: #613400 !default;
+
+/** volcano/火山 */
+$volcano-1: #FFF2E8 !default;
+$volcano-2: #FFD8BF !default;
+$volcano-3: #FFBB96 !default;
+$volcano-4: #FF9C6E !default;
+$volcano-5: #FF7A45 !default;
+$volcano-6: #FA541C !default;
+$volcano-7: #D4380D !default;
+$volcano-8: #AD2102 !default;
+$volcano-9: #871400 !default;
+$volcano-10: #610B00 !default;
+
+/** geekblue/极客蓝 */
+$geekblue-1: #F0F5FF !default;
+$geekblue-2: #D6E4FF !default;
+$geekblue-3: #ADC6FF !default;
+$geekblue-4: #85A5FF !default;
+$geekblue-5: #597EF7 !default;
+$geekblue-6: #2F54EB !default;
+$geekblue-7: #1D39C4 !default;
+$geekblue-8: #10239E !default;
+$geekblue-9: #061178 !default;
+$geekblue-10: #030852 !default;
+
+/** lime/青柠 */
+$lime-1: #FCFFE6 !default;
+$lime-2: #F4FFB8 !default;
+$lime-3: #EAFF8F !default;
+$lime-4: #D3F261 !default;
+$lime-5: #BAE637 !default;
+$lime-6: #A0D911 !default;
+$lime-7: #7CB305 !default;
+$lime-8: #5B8C00 !default;
+$lime-9: #3F6600 !default;
+$lime-10: #254000 !default;
+
+$white: #fff !default;
+$black: #000 !default;
+
+$preset-colors: (
+	'gray': $gray-6,
+	'blue': $blue-6,
+	'purple': $purple-6,
+	'cyan': $cyan-6,
+	'gold': $gold-6,
+	'green': $green-6,
+	'magenta': $magenta-6,
+	'pink': $pink-6,
+	'red': $red-6,
+	'orange':$orange-6,
+	'yellow': $yellow-6,
+	'volcano': $volcano-6,
+	'geekblue': $geekblue-6,
+	'lime': $lime-6
+)
