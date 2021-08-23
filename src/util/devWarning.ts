@@ -1,0 +1,11 @@
+/*
+ * @Author: angel
+ * @Date: 2021-08-23 19:27:38
+ * @LastEditTime: 2021-08-23 19:31:06
+ * @LastEditors: angel
+ * @FilePath: /angel-ui/src/util/devWarning.ts
+ * @Description:
+ */
+export default (valid: boolean, component: string, message: string): void => {
+  valid && console.warn(`[ant: ${component}] ${message}`);
+};
