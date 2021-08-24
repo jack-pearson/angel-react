@@ -1,7 +1,7 @@
 /*
  * @Author: angel
  * @Date: 2021-08-19 20:24:49
- * @LastEditTime: 2021-08-24 14:00:08
+ * @LastEditTime: 2021-08-24 14:05:58
  * @LastEditors: angel
  * @FilePath: /angel-ui/src/components/Button/button.tsx
  * @Description:
@@ -51,5 +51,5 @@ export type IButtonProps = Partial<NativeButtonProps & AnchorButtonProps>;
  */
 
 export const Button: FC<IButtonProps> = ({ size = 'middle', type = 'default', htmlType = 'button' }) => {
-  return <button type={htmlType}>123</button>;
+  return <button type={htmlType}>321</button>;
 };
