@@ -8,4 +8,5 @@ dist-ssr
 yarn.lock
 .vscode
 package-lock.json
-/.vscode/
+.vscode/
+storybook-static
