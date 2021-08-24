@@ -1,0 +1,18 @@
+{
+	"compilerOptions": {
+		"outDir": "dist", // 输出文件目录
+		"module": "esNext", // 输出的类型
+		"target": "es5", // 指定目标版本
+		"declaration": true, // 对每一个js 文件,生成一个 *.d.ts 文件
+		"jsx":"react", // jsx 版本
+		"moduleResolution": "node", // 模块查找方式
+		"allowSyntheticDefaultImports": true // 支持默认导出
+	},
+	"include": [ // 包含文件
+		"src"
+	],
+	"exclude": [ // 忽略文件
+		"src/**/*.test.tsx",
+		"src/**/*.stories.tsx",
+	]
+}

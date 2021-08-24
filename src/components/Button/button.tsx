@@ -1,12 +1,12 @@
 /*
  * @Author: angel
  * @Date: 2021-08-19 20:24:49
- * @LastEditTime: 2021-08-23 20:05:42
+ * @LastEditTime: 2021-08-24 11:13:13
  * @LastEditors: angel
  * @FilePath: /angel-ui/src/components/Button/button.tsx
  * @Description:
  */
-import { AnchorHTMLAttributes, ButtonHTMLAttributes, FC } from 'react';
+import React, { AnchorHTMLAttributes, ButtonHTMLAttributes, FC } from 'react';
 import { tuple } from '../../util/type';
 
 const ButtonSizes = tuple('large', 'middle', 'small');
@@ -36,7 +36,7 @@ interface IBaseButtonProps {
 type NativeButtonProps = {
   htmlType?: ButtonHTMLType;
 } & IBaseButtonProps &
-  Omit<React.ButtonHTMLAttributes<any>, 'type' | 'onClick'>;
+  Omit<ButtonHTMLAttributes<any>, 'type' | 'onClick'>;
 type AnchorButtonProps = IBaseButtonProps & AnchorHTMLAttributes<HTMLElement>;
 export type IButtonProps = Partial<NativeButtonProps & AnchorButtonProps>;
 

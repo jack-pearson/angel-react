@@ -1,7 +1,7 @@
 /*
  * @Author: angel
  * @Date: 2021-08-16 15:55:46
- * @LastEditTime: 2021-08-17 20:12:15
+ * @LastEditTime: 2021-08-24 13:42:38
  * @LastEditors: angel
  * @FilePath: /angel-ui/src/components/Icon/icon.test.tsx
  * @Description: test Icon component
@@ -11,9 +11,9 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
-library.add(fas, fab, far);
-
 import { Icon } from './icon';
+
+library.add(fas, fab, far);
 
 describe('test Icon component', () => {
   it('Test whether the Icon component is className correctly', () => {

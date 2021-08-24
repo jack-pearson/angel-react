@@ -1,7 +1,7 @@
 /*
  * @Author: angel
  * @Date: 2021-08-16 10:42:51
- * @LastEditTime: 2021-08-17 20:11:55
+ * @LastEditTime: 2021-08-24 11:04:10
  * @LastEditors: angel
  * @FilePath: /angel-ui/src/index.tsx
  * @Description:
@@ -13,3 +13,4 @@ import { far } from '@fortawesome/free-regular-svg-icons';
 library.add(fas, fab, far);
 
 export { default as Icon } from './components/Icon';
+export { default as Button } from './components/Button';
