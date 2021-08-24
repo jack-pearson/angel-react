@@ -1,8 +1,8 @@
 /*
- * @Author: angel
+ * @Author: jack-pearson
  * @Date: 2021-08-16 15:55:46
  * @LastEditTime: 2021-08-24 13:42:38
- * @LastEditors: angel
+ * @LastEditors: jack-pearson
  * @FilePath: /angel-ui/src/components/Icon/icon.test.tsx
  * @Description: test Icon component
  */

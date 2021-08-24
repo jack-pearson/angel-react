@@ -1,8 +1,8 @@
 /*
- * @Author: angel
+ * @Author: jack-pearson
  * @Date: 2021-08-16 10:42:51
  * @LastEditTime: 2021-08-16 21:07:57
- * @LastEditors: angel
+ * @LastEditors: jack-pearson
  * @FilePath: /angel-ui/.storybook/main.js
  * @Description:
  */

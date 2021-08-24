@@ -1,8 +1,8 @@
 /*
- * @Author: angel
+ * @Author: jack-pearson
  * @Date: 2021-08-13 17:38:24
  * @LastEditTime: 2021-08-23 20:06:31
- * @LastEditors: angel
+ * @LastEditors: jack-pearson
  * @FilePath: /angel-ui/src/components/Button/Button.stories.tsx
  * @Description: props look https://fontawesome.com/v5.15/how-to-use/on-the-web/using-with/react
  */

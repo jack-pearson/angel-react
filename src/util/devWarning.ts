@@ -1,8 +1,8 @@
 /*
- * @Author: angel
+ * @Author: jack-pearson
  * @Date: 2021-08-23 19:27:38
  * @LastEditTime: 2021-08-23 19:31:06
- * @LastEditors: angel
+ * @LastEditors: jack-pearson
  * @FilePath: /angel-ui/src/util/devWarning.ts
  * @Description:
  */
