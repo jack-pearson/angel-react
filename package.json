@@ -16,6 +16,10 @@
     "UI",
     "React"
   ],
+  "homepage": "https://jack-pearson.github.io/angel-ui/",
+  "bugs": {
+    "url": "https://github.com/jack-pearson/angel-ui/issues"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/jack-pearson/angel-ui"
