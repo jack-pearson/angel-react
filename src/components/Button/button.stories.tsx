@@ -1,7 +1,7 @@
 /*
  * @Author: jack-pearson
  * @Date: 2021-08-13 17:38:24
- * @LastEditTime: 2021-08-25 12:02:46
+ * @LastEditTime: 2021-08-25 13:14:28
  * @LastEditors: jack-pearson
  * @FilePath: /angel-ui/src/components/Button/button.stories.tsx
  * @Description: props look https://fontawesome.com/v5.15/how-to-use/on-the-web/using-with/react
@@ -30,7 +30,4 @@ export default {
 const Template: ComponentStory<typeof Button> = args => <Button {...args} />;
 
 export const DefaultButton = Template.bind({});
-DefaultButton.args = {
-  size: 'large',
-  type: 'link',
-};
+DefaultButton.args = {};
