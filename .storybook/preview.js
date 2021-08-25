@@ -1,11 +1,12 @@
 /*
  * @Author: jack-pearson
  * @Date: 2021-08-16 10:42:51
- * @LastEditTime: 2021-08-16 20:39:46
+ * @LastEditTime: 2021-08-25 12:01:57
  * @LastEditors: jack-pearson
  * @FilePath: /angel-ui/.storybook/preview.js
  * @Description:
  */
+import '../src/styles/index.scss';
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
   controls: {

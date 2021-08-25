@@ -1,17 +1,18 @@
 /*
  * @Author: jack-pearson
  * @Date: 2021-08-19 20:24:49
- * @LastEditTime: 2021-08-24 14:05:58
+ * @LastEditTime: 2021-08-25 11:57:04
  * @LastEditors: jack-pearson
  * @FilePath: /angel-ui/src/components/Button/button.tsx
  * @Description:
  */
+import classNames from 'classnames';
 import React, { AnchorHTMLAttributes, ButtonHTMLAttributes, FC } from 'react';
 import { tuple } from '../../util/type';
 
-const ButtonSizes = tuple('large', 'middle', 'small');
+const ButtonSizes = tuple('large', 'small');
 export type ButtonSize = typeof ButtonSizes[number];
-const ButtonTypes = tuple('link', 'dashed', 'text', 'default');
+const ButtonTypes = tuple('link', 'dashed', 'text');
 export type ButtonType = typeof ButtonTypes[number];
 export type ButtonShape = 'circle' | 'round';
 const ButtonHTMLTypes = tuple('submit', 'button', 'reset');
@@ -50,6 +51,14 @@ export type IButtonProps = Partial<NativeButtonProps & AnchorButtonProps>;
  * ~~~
  */
 
-export const Button: FC<IButtonProps> = ({ size = 'middle', type = 'default', htmlType = 'button' }) => {
-  return <button type={htmlType}>321</button>;
+export const Button: FC<IButtonProps> = ({ size, type, htmlType = 'button', className }) => {
+  const classes = classNames('angel-btn', className, {
+    [`angel-btn-${size}`]: size,
+    [`angel-btn-${type}`]: type,
+  });
+  return (
+    <button className={classes} type={htmlType}>
+      321
+    </button>
+  );
 };
