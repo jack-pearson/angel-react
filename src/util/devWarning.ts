@@ -6,6 +6,7 @@
  * @FilePath: /angel-ui/src/util/devWarning.ts
  * @Description:
  */
-export default (valid: boolean, component: string, message: string): void => {
+const warn = (valid: boolean, component: string, message: string): void => {
   valid && console.warn(`[ant: ${component}] ${message}`);
 };
+export default warn;

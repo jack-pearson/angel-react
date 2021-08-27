@@ -7,7 +7,10 @@
  * @Description:
  */
 import classNames from 'classnames';
-import React, { AnchorHTMLAttributes, ButtonHTMLAttributes, FC, useImperativeHandle } from 'react';
+import React, { 
+  AnchorHTMLAttributes, 
+  ButtonHTMLAttributes,
+} from 'react';
 import { tuple } from '../../util/type';
 
 const ButtonSizes = tuple('large', 'small');
@@ -59,7 +62,8 @@ function formatSize(size: IBaseButtonProps['size']) {
       break;
   }
 }
-export const Button: React.ForwardRefRenderFunction<unknown, IButtonProps> = (
+
+const BaseButton: React.ForwardRefRenderFunction<HTMLElement, IButtonProps> = (
   { size, type, htmlType = 'button', className, children, ...restProps }: IButtonProps,
   ref,
 ) => {
@@ -76,4 +80,4 @@ export const Button: React.ForwardRefRenderFunction<unknown, IButtonProps> = (
   );
 };
 
-export default React.forwardRef<unknown, IButtonProps>(Button);
+export const Button = React.forwardRef<HTMLElement, IButtonProps>(BaseButton);;
