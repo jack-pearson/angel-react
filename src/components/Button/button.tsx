@@ -1,13 +1,13 @@
 /*
  * @Author: jack-pearson
  * @Date: 2021-08-19 20:24:49
- * @LastEditTime: 2021-08-25 11:57:04
+ * @LastEditTime: 2021-08-27 17:55:30
  * @LastEditors: jack-pearson
  * @FilePath: /angel-ui/src/components/Button/button.tsx
  * @Description:
  */
 import classNames from 'classnames';
-import React, { AnchorHTMLAttributes, ButtonHTMLAttributes, FC } from 'react';
+import React, { AnchorHTMLAttributes, ButtonHTMLAttributes, FC, useImperativeHandle } from 'react';
 import { tuple } from '../../util/type';
 
 const ButtonSizes = tuple('large', 'small');
@@ -32,12 +32,11 @@ interface IBaseButtonProps {
   shape?: ButtonShape;
   /** 类型为 link 的时候的链接 */
   href?: string;
+  /** 设置按钮的图标组件 */
+  icon?: React.ReactNode;
 }
 
-type NativeButtonProps = {
-  htmlType?: ButtonHTMLType;
-} & IBaseButtonProps &
-  Omit<ButtonHTMLAttributes<any>, 'type' | 'onClick'>;
+type NativeButtonProps = { htmlType?: ButtonHTMLType } & IBaseButtonProps & ButtonHTMLAttributes<HTMLElement>;
 type AnchorButtonProps = IBaseButtonProps & AnchorHTMLAttributes<HTMLElement>;
 export type IButtonProps = Partial<NativeButtonProps & AnchorButtonProps>;
 
@@ -50,15 +49,31 @@ export type IButtonProps = Partial<NativeButtonProps & AnchorButtonProps>;
  * import { Button } from 'angel-ui'
  * ~~~
  */
-
-export const Button: FC<IButtonProps> = ({ size, type, htmlType = 'button', className }) => {
+function formatSize(size: IBaseButtonProps['size']) {
+  switch (size) {
+    case 'large':
+      return 'lg';
+    case 'small':
+      return 'sm';
+    default:
+      break;
+  }
+}
+export const Button: React.ForwardRefRenderFunction<unknown, IButtonProps> = (
+  { size, type, htmlType = 'button', className, children, ...restProps }: IButtonProps,
+  ref,
+) => {
+  const buttonRef = (ref as any) || React.createRef<HTMLElement>();
+  const btnSize = formatSize(size);
   const classes = classNames('angel-btn', className, {
-    [`angel-btn-${size}`]: size,
+    [`angel-btn-${btnSize}`]: btnSize,
     [`angel-btn-${type}`]: type,
   });
   return (
-    <button className={classes} type={htmlType}>
-      321
+    <button className={classes} type={htmlType} {...restProps} ref={buttonRef}>
+      {children}
     </button>
   );
 };
+
+export default React.forwardRef<unknown, IButtonProps>(Button);
