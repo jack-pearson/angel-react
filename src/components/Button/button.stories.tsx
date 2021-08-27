@@ -6,9 +6,9 @@
  * @FilePath: /angel-ui/src/components/Button/button.stories.tsx
  * @Description: props look https://fontawesome.com/v5.15/how-to-use/on-the-web/using-with/react
  */
-import { ComponentStory, ComponentMeta, Meta, Story } from '@storybook/react';
+import { Meta, Story } from '@storybook/react';
 import React from 'react';
-import Button, { IButtonProps } from './button';
+import { Button, IButtonProps } from './button';
 
 export default {
   title: 'Button',
