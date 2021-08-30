@@ -1,4 +1,9 @@
-/**  button */
+// Buttons
+
+// font
+$btn-font-weight: 400;
+
+// btn-size
 $btn-padding-y: 8px;
 $btn-padding-x: 15px;
 $btn-font-size: 14px;
@@ -13,3 +18,6 @@ $btn-padding-y-sm: 7px;
 $btn-padding-x-sm: 12px;
 $btn-font-size-sm: 12px;
 $btn-border-radius-sm: 2px;
+
+$btn-border-width: $border-width-base;
+$btn-border-style: $border-style-base;

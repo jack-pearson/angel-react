@@ -1,1 +1,7 @@
 $angel-base: angel;
+
+$border-style-base: solid; // 组件边框的样式
+$border-width-base: 1px; // 组件边框的宽度
+
+// Animation
+$ease-in-out: cubic-bezier(0.645, 0.045, 0.355, 1);

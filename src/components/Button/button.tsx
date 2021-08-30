@@ -1,13 +1,14 @@
 /*
  * @Author: jack-pearson
  * @Date: 2021-08-19 20:24:49
- * @LastEditTime: 2021-08-30 17:01:27
+ * @LastEditTime: 2021-08-30 20:06:13
  * @LastEditors: jack-pearson
  * @FilePath: /angel-ui/src/components/Button/button.tsx
  * @Description:
  */
 import classNames from 'classnames';
 import React, { AnchorHTMLAttributes, ButtonHTMLAttributes } from 'react';
+import { getPrefixCls } from '../../config';
 import { tuple } from '../../util/type';
 
 const ButtonSizes = tuple('large', 'small');
@@ -34,6 +35,8 @@ interface IBaseButtonProps {
   href?: string;
   /** 设置按钮的图标组件 */
   icon?: React.ReactNode;
+  /** 是否可点击 */
+  disabled?: boolean;
 }
 
 type NativeButtonProps = { htmlType?: ButtonHTMLType } & IBaseButtonProps & ButtonHTMLAttributes<HTMLElement>;
@@ -66,10 +69,11 @@ const BaseButton: React.ForwardRefRenderFunction<HTMLElement, IButtonProps> = (
 ) => {
   const buttonRef = (ref as any) || React.createRef<HTMLElement>();
   const btnSize = formatSize(size);
-  const classes = classNames('angel-btn', className, {
-    [`angel-btn-${btnSize}`]: btnSize,
-    [`angel-btn-${type}`]: type,
-    [`angel-btn-${shape}`]: shape,
+  const prefixCls = getPrefixCls('btn');
+  const classes = classNames(prefixCls, className, {
+    [`${prefixCls}-${btnSize}`]: btnSize,
+    [`${prefixCls}-${type}`]: type,
+    [`${prefixCls}-${shape}`]: shape,
   });
   return (
     <button className={classes} type={htmlType} {...restProps} ref={buttonRef}>

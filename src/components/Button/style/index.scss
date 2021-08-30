@@ -1,33 +1,8 @@
-@import 'mixin';
 @import 'variables';
-.angel-btn {
-  position: relative;
-  display: inline-block;
-  white-space: nowrap;
-  text-align: center;
-  vertical-align: middle;
-  background-image: none;
-  cursor: pointer;
-  transition: all .3s cubic-bezier(.645,.045,.355,1);
-  user-select: none;
-  touch-action: manipulation;
-  outline: 0;
-  border: 1px solid transparent;
-  border-color: #d9d9d9;
-  box-shadow: 0 2px #00000004;
-  line-height: 1;
-  @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-border-radius);
-}
+@import 'mixin';
 
-.angel-btn-lg {
-  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-border-radius-lg);
-}
-.angel-btn-sm {
-  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm,$btn-border-radius-sm);
-}
-.angel-btn-circle{
-  border-radius: 50%;
-}
-.angel-btn-round{
-  border-radius: 20px;
+$btn-prefix-cls: '#{$angel-base}-btn';
+
+.#{$btn-prefix-cls} {
+  @include btn();
 }

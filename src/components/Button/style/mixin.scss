@@ -1,9 +1,37 @@
-@mixin button-size($btn-padding-y,$btn-padding-x,$btn-size, $btn-border-radius) {
-	padding: $btn-padding-y $btn-padding-x ;
-	font-size: $btn-size;
-	border-radius: $btn-border-radius;
+// mixins for button
+// --------------------------------------------------------------------------------
+@mixin button-size($btn-padding-y, $btn-padding-x, $btn-size, $btn-border-radius) {
+  padding: $btn-padding-y $btn-padding-x;
+  font-size: $btn-size;
+  border-radius: $btn-border-radius;
 }
 
+// Base styles of buttons
 @mixin btn() {
-	
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+  text-align: center;
+  vertical-align: middle;
+  background-image: none;
+  cursor: pointer;
+	font-weight: $btn-font-weight;
+  transition: all 0.3s $ease-in-out;
+  user-select: none;
+  touch-action: manipulation;
+  border: $btn-border-width $btn-border-style transparent;
+  border-color: #d9d9d9;
+  box-shadow: 0 2px #00000004;
+  line-height: 1;
+  @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-border-radius);
+  &:active,
+  &:focus {
+    outline: 0;
+  }
+  &-lg {
+    @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-border-radius-lg);
+  }
+  &-sm {
+    @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-border-radius-sm);
+  }
 }
