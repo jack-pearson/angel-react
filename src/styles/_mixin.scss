@@ -1,6 +1,0 @@
-@mixin button-size($btn-padding-y,$btn-padding-x,$btn-height,$btn-size, $btn-border-radius) {
-	padding: $btn-padding-y $btn-padding-x ;
-	height:$btn-height ;
-	font-size: $btn-size;
-	border-radius: $btn-border-radius;
-}

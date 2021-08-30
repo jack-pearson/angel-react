@@ -1,16 +1,13 @@
 /*
  * @Author: jack-pearson
  * @Date: 2021-08-19 20:24:49
- * @LastEditTime: 2021-08-27 17:55:30
+ * @LastEditTime: 2021-08-30 17:01:27
  * @LastEditors: jack-pearson
  * @FilePath: /angel-ui/src/components/Button/button.tsx
  * @Description:
  */
 import classNames from 'classnames';
-import React, { 
-  AnchorHTMLAttributes, 
-  ButtonHTMLAttributes,
-} from 'react';
+import React, { AnchorHTMLAttributes, ButtonHTMLAttributes } from 'react';
 import { tuple } from '../../util/type';
 
 const ButtonSizes = tuple('large', 'small');
@@ -64,7 +61,7 @@ function formatSize(size: IBaseButtonProps['size']) {
 }
 
 const BaseButton: React.ForwardRefRenderFunction<HTMLElement, IButtonProps> = (
-  { size, type, htmlType = 'button', className, children, ...restProps }: IButtonProps,
+  { size, type, shape, htmlType = 'button', className, children, ...restProps }: IButtonProps,
   ref,
 ) => {
   const buttonRef = (ref as any) || React.createRef<HTMLElement>();
@@ -72,6 +69,7 @@ const BaseButton: React.ForwardRefRenderFunction<HTMLElement, IButtonProps> = (
   const classes = classNames('angel-btn', className, {
     [`angel-btn-${btnSize}`]: btnSize,
     [`angel-btn-${type}`]: type,
+    [`angel-btn-${shape}`]: shape,
   });
   return (
     <button className={classes} type={htmlType} {...restProps} ref={buttonRef}>
@@ -80,4 +78,4 @@ const BaseButton: React.ForwardRefRenderFunction<HTMLElement, IButtonProps> = (
   );
 };
 
-export const Button = React.forwardRef<HTMLElement, IButtonProps>(BaseButton);;
+export const Button = React.forwardRef<HTMLElement, IButtonProps>(BaseButton);
