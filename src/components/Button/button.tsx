@@ -1,7 +1,7 @@
 /*
  * @Author: jack-pearson
  * @Date: 2021-08-19 20:24:49
- * @LastEditTime: 2021-08-31 15:35:23
+ * @LastEditTime: 2021-08-31 19:56:18
  * @LastEditors: jack-pearson
  * @FilePath: /angel-ui/src/components/Button/button.tsx
  * @Description:
@@ -35,7 +35,7 @@ interface IBaseButtonProps {
   href?: string;
   /** 设置按钮的图标组件 */
   icon?: React.ReactNode;
-  /** 是否可点击 */
+  /** 是否可禁用 */
   disabled?: boolean;
 }
 

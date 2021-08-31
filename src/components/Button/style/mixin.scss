@@ -82,3 +82,16 @@
 @mixin btn-border($color) {
   border-color: $color;
 }
+@mixin btn-disabled($color: $btn-disable-color,$background: $btn-disable-bg,$border: $btn-disable-border) {
+  &[disabled] {
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      @include button-color($color,$background,$border);
+      cursor: not-allowed;
+      text-shadow: none;
+      box-shadow: none;
+    }
+  }
+}

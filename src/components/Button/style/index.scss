@@ -19,5 +19,6 @@ $btn-prefix-cls: '#{$angel-base}-btn';
     background-color: $blue-6;
     color: $white;
     border-color: $blue-6;
+    @include btn-disabled()
   }
 }
