@@ -1,7 +1,7 @@
 /*
  * @Author: jack-pearson
  * @Date: 2021-08-19 20:24:49
- * @LastEditTime: 2021-08-30 20:06:13
+ * @LastEditTime: 2021-08-31 15:35:23
  * @LastEditors: jack-pearson
  * @FilePath: /angel-ui/src/components/Button/button.tsx
  * @Description:
@@ -13,7 +13,7 @@ import { tuple } from '../../util/type';
 
 const ButtonSizes = tuple('large', 'small');
 export type ButtonSize = typeof ButtonSizes[number];
-const ButtonTypes = tuple('link', 'dashed', 'text');
+const ButtonTypes = tuple('link', 'primary', 'dashed', 'text');
 export type ButtonType = typeof ButtonTypes[number];
 export type ButtonShape = 'circle' | 'round';
 const ButtonHTMLTypes = tuple('submit', 'button', 'reset');
@@ -21,7 +21,7 @@ export type ButtonHTMLType = typeof ButtonHTMLTypes[number];
 interface IBaseButtonProps {
   className?: string;
   /** 按钮的类型 */
-  type?: ButtonType;
+  type?: ButtonType | any;
   children?: React.ReactNode;
   /** 大小 */
   size?: ButtonSize;
@@ -64,7 +64,16 @@ function formatSize(size: IBaseButtonProps['size']) {
 }
 
 const BaseButton: React.ForwardRefRenderFunction<HTMLElement, IButtonProps> = (
-  { size, type, shape, htmlType = 'button', className, children, ...restProps }: IButtonProps,
+  {
+    size,
+    type = 'primary',
+    shape,
+    htmlType = 'button',
+    border = true,
+    className,
+    children,
+    ...restProps
+  }: IButtonProps,
   ref,
 ) => {
   const buttonRef = (ref as any) || React.createRef<HTMLElement>();
@@ -74,6 +83,7 @@ const BaseButton: React.ForwardRefRenderFunction<HTMLElement, IButtonProps> = (
     [`${prefixCls}-${btnSize}`]: btnSize,
     [`${prefixCls}-${type}`]: type,
     [`${prefixCls}-${shape}`]: shape,
+    [`${prefixCls}-no-border`]: !border,
   });
   return (
     <button className={classes} type={htmlType} {...restProps} ref={buttonRef}>

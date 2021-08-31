@@ -1,11 +1,12 @@
 // mixins for button
 // --------------------------------------------------------------------------------
-@mixin button-size($btn-padding-y, $btn-padding-x, $btn-size, $btn-border-radius) {
+
+// btn size
+@mixin button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-border-radius) {
   padding: $btn-padding-y $btn-padding-x;
-  font-size: $btn-size;
+  font-size: $btn-font-size;
   border-radius: $btn-border-radius;
 }
-
 // Base styles of buttons
 @mixin btn() {
   position: relative;
@@ -19,10 +20,10 @@
   transition: all 0.3s $ease-in-out;
   user-select: none;
   touch-action: manipulation;
-  border: $btn-border-width $btn-border-style transparent;
+  border: $btn-border-width $btn-border-style $transparent;
   border-color: #d9d9d9;
   box-shadow: 0 2px #00000004;
-  line-height: 1;
+  line-height: $btn-line-height;
   @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-border-radius);
   &:active,
   &:focus {
@@ -34,4 +35,50 @@
   &-sm {
     @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-border-radius-sm);
   }
+}
+
+// btn color
+@mixin button-color($color, $background: transparent, $border){
+  color: $color;
+  background: $background;
+  @include btn-border($border)
+}
+// btn 默认数据
+@mixin btn-default($color, $background, $border) {
+  @include button-color($color, $background, $border);
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+    background: $btn-default-bg;
+  }
+}
+@mixin btn-round($btnClassName: btn) {
+  @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, 20px);
+  &.#{$btnClassName}-lg {
+    @include button-size(
+      $btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, 20px
+    );
+  }
+  &.#{$btnClassName}-sm {
+    @include button-size(
+      $btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, 20px
+    );
+  }
+}
+@mixin btn-circle($btnClassName: btn) {
+  @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, 50%);
+  &.#{$btnClassName}-lg {
+    @include button-size(
+      $btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, 50%
+    );
+  }
+  &.#{$btnClassName}-sm {
+    @include button-size(
+      $btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, 50%
+    );
+  }
+}
+@mixin btn-border($color) {
+  border-color: $color;
 }

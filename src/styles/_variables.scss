@@ -1,7 +1,16 @@
-$angel-base: angel;
+/// 变量定义
+$angel-base: angel; // 全局 css 名称
 
+/// 组件的样式
 $border-style-base: solid; // 组件边框的样式
 $border-width-base: 1px; // 组件边框的宽度
+$line-height-base: 1; // 组件行高
+$transparent: transparent; // 透明
+$border-color-base: hsl(0, 0, 85%);  // 组件边框颜色
 
-// Animation
+/// Animation
 $ease-in-out: cubic-bezier(0.645, 0.045, 0.355, 1);
+
+/// 颜色
+$text-color: lighten($black, 15%);
+$text-color-secondary: lighten($black, 55%);
