@@ -21,7 +21,7 @@ module.exports = {
     polyfills: ['Promise', 'URL'],
   },
   parser: '@typescript-eslint/parser',
-  plugins: ['react', 'babel', 'jest', '@typescript-eslint', 'react-hooks', 'unicorn', 'markdown'],
+  plugins: ['react', 'babel', 'jest', '@typescript-eslint', 'react-hooks', 'unicorn', 'markdown', 'import'],
   // https://github.com/typescript-eslint/typescript-eslint/issues/46#issuecomment-470486034
   overrides: [
     {
@@ -75,7 +75,6 @@ module.exports = {
         'react/no-array-index-key': 0,
         'jsx-a11y/href-no-hash': 0,
         'jsx-a11y/control-has-associated-label': 0,
-        'import/no-extraneous-dependencies': 0,
       },
     },
   ],
@@ -103,15 +102,7 @@ module.exports = {
     'import/no-extraneous-dependencies': [
       'error',
       {
-        devDependencies: [
-          'site/**',
-          'tests/**',
-          'scripts/**',
-          '**/*.test.js',
-          '**/__tests__/*',
-          '*.config.js',
-          '**/*.md',
-        ],
+        devDependencies: ['**/*.stories.tsx', '**/*.{ts,tsx}', '*.config.js', '**/*.{md,mdx}'],
       },
     ],
     'jsx-a11y/no-static-element-interactions': 0,

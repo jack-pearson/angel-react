@@ -1,11 +1,12 @@
 /*
  * @Author: jack-pearson
  * @Date: 2021-08-16 15:55:46
- * @LastEditTime: 2021-08-24 13:42:38
+ * @LastEditTime: 2021-09-01 11:31:10
  * @LastEditors: jack-pearson
  * @FilePath: /angel-ui/src/components/Icon/icon.test.tsx
  * @Description: test Icon component
  */
+import React from 'react';
 import { render } from '@testing-library/react';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';

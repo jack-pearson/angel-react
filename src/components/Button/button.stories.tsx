@@ -1,11 +1,12 @@
 /*
  * @Author: jack-pearson
  * @Date: 2021-08-13 17:38:24
- * @LastEditTime: 2021-08-31 14:36:52
+ * @LastEditTime: 2021-09-01 11:23:40
  * @LastEditors: jack-pearson
  * @FilePath: /angel-ui/src/components/Button/button.stories.tsx
  * @Description: props look https://fontawesome.com/v5.15/how-to-use/on-the-web/using-with/react
  */
+import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { Button, IButtonProps } from './button';
 
