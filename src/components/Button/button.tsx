@@ -1,7 +1,7 @@
 /*
  * @Author: jack-pearson
  * @Date: 2021-08-19 20:24:49
- * @LastEditTime: 2021-09-02 17:09:13
+ * @LastEditTime: 2021-09-02 20:11:55
  * @LastEditors: jack-pearson
  * @FilePath: /angel-ui/src/components/Button/button.tsx
  * @Description:
@@ -77,7 +77,7 @@ const BaseButton: React.ForwardRefRenderFunction<HTMLElement, IButtonProps> = (
     htmlType = 'button',
     className,
     children,
-    disabled,
+    disabled = false,
     onClick,
     href,
     ...restProps
@@ -103,13 +103,14 @@ const BaseButton: React.ForwardRefRenderFunction<HTMLElement, IButtonProps> = (
   };
   if (type === 'link' && href) {
     return (
-      <a className={classes} href={href} ref={buttonRef} onClick={handleClick} {...restProps}>
+      // @ts-ignore：无法被执行的代码的错误
+      <a className={classes} href={href} disabled={disabled} ref={buttonRef} onClick={handleClick} {...restProps}>
         {children}
       </a>
     );
   }
   return (
-    <button className={classes} type={htmlType} ref={buttonRef} {...restProps}>
+    <button className={classes} type={htmlType} disabled={disabled} ref={buttonRef} {...restProps}>
       {children}
     </button>
   );
