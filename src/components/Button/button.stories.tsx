@@ -1,7 +1,7 @@
 /*
  * @Author: jack-pearson
  * @Date: 2021-08-13 17:38:24
- * @LastEditTime: 2021-09-01 11:23:40
+ * @LastEditTime: 2021-09-02 13:20:37
  * @LastEditors: jack-pearson
  * @FilePath: /angel-ui/src/components/Button/button.stories.tsx
  * @Description: props look https://fontawesome.com/v5.15/how-to-use/on-the-web/using-with/react
@@ -25,16 +25,24 @@ export default {
         disable: true,
       },
     },
+    color: {
+      defaultValue: 'primary',
+      control: { type: 'select' },
+    },
+    type: {
+      defaultValue: 'default',
+      control: { type: 'select' },
+    },
+    size: {
+      defaultValue: 'middle',
+      control: { type: 'select' },
+    },
   },
 } as ComponentMeta<typeof Button>;
 
 const Template: ComponentStory<typeof Button> = (args: IButtonProps) => <Button {...args} />;
 
 export const DefaultButton = Template.bind({});
-export const RoundButton = Template.bind({});
 DefaultButton.args = {
   children: '测试按钮',
-};
-RoundButton.args = {
-  children: '123',
 };

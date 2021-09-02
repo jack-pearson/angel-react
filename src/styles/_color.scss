@@ -184,4 +184,10 @@ $preset-colors: (
 	'volcano': $volcano-6,
 	'geekblue': $geekblue-6,
 	'lime': $lime-6
-)
+);
+
+$primary-color: $blue-6; // 主要颜色
+$error-color: $red-5; // 错误颜色
+$warning-color: $yellow-6; // 警告颜色
+$success-color: $cyan-6; // 成功颜色
+$info-color: $gray-6; // 文本颜色

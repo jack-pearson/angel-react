@@ -6,9 +6,6 @@ $btn-prefix-cls: '#{$angel-base}-btn';
 .#{$btn-prefix-cls} {
   @include btn();
   @include btn-default($btn-default-color,$btn-default-bg,$btn-default-border);
-  &.#{$btn-prefix-cls}-no-border {
-    @include btn-border($transparent);
-  }
   &.#{$btn-prefix-cls}-round{
     @include btn-round($btn-prefix-cls)
   }
@@ -16,9 +13,57 @@ $btn-prefix-cls: '#{$angel-base}-btn';
     @include btn-circle($btn-prefix-cls)
   }
   &.#{$btn-prefix-cls}-primary {
-    background-color: $blue-6;
-    color: $white;
-    border-color: $blue-6;
-    @include btn-disabled()
+    @include btn-primary()
+  }
+  &.#{$btn-prefix-cls}-danger {
+    @include btn-danger()
+  }
+  &.#{$btn-prefix-cls}-warning {
+    @include btn-warning()
+  }
+  &.#{$btn-prefix-cls}-success {
+    @include btn-success()
+  }
+  &.#{$btn-prefix-cls}-info {
+    @include btn-info()
+  }
+  &.#{$btn-prefix-cls}-dashed {
+    @include btn-dashed();
+    &.#{$btn-prefix-cls}-primary {
+      @include btn-dashed-primary();
+    }
+    &.#{$btn-prefix-cls}-danger {
+      @include btn-dashed-danger();
+    }
+    &.#{$btn-prefix-cls}-warning {
+      @include btn-dashed-warning();
+    }
+    &.#{$btn-prefix-cls}-success {
+      @include btn-dashed-success();
+    }
+    &.#{$btn-prefix-cls}-info {
+      @include btn-dashed-info();
+    }
+  }
+  &.#{$btn-prefix-cls}-link {
+    @include btn-link();
+    &.#{$btn-prefix-cls}-primary {
+      @include btn-link-primary();
+    }
+    &.#{$btn-prefix-cls}-danger {
+      @include btn-link-danger();
+    }
+    &.#{$btn-prefix-cls}-warning {
+      @include btn-link-warning();
+    }
+    &.#{$btn-prefix-cls}-success {
+      @include btn-link-success();
+    }
+    &.#{$btn-prefix-cls}-info {
+      @include btn-link-info();
+    }
+  }
+  &.#{$btn-prefix-cls}-text {
+    @include btn-text();
   }
 }

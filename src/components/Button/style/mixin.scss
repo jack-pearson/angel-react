@@ -1,6 +1,5 @@
 // mixins for button
 // --------------------------------------------------------------------------------
-
 // btn size
 @mixin button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-border-radius) {
   padding: $btn-padding-y $btn-padding-x;
@@ -22,7 +21,7 @@
   touch-action: manipulation;
   border: $btn-border-width $btn-border-style $transparent;
   border-color: #d9d9d9;
-  box-shadow: 0 2px #00000004;
+  box-shadow: $btn-shadow;
   line-height: $btn-line-height;
   @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-border-radius);
   &:active,
@@ -38,10 +37,10 @@
 }
 
 // btn color
-@mixin button-color($color, $background: transparent, $border){
+@mixin button-color($color, $background: transparent, $border:transparent){
   color: $color;
   background: $background;
-  @include btn-border($border)
+  border-color: $border
 }
 // btn 默认数据
 @mixin btn-default($color, $background, $border) {
@@ -49,10 +48,12 @@
   &:hover,
   &:focus,
   &:active {
+    @include button-color(lighten($color, 10%), lighten($background, 10%), lighten($border, 10%));
     text-decoration: none;
     background: $btn-default-bg;
   }
 }
+// btn 圆形
 @mixin btn-round($btnClassName: btn) {
   @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, 20px);
   &.#{$btnClassName}-lg {
@@ -66,6 +67,7 @@
     );
   }
 }
+// btn 正圆
 @mixin btn-circle($btnClassName: btn) {
   @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, 50%);
   &.#{$btnClassName}-lg {
@@ -79,9 +81,7 @@
     );
   }
 }
-@mixin btn-border($color) {
-  border-color: $color;
-}
+// btn 禁用
 @mixin btn-disabled($color: $btn-disable-color,$background: $btn-disable-bg,$border: $btn-disable-border) {
   &[disabled] {
     &,
@@ -92,6 +92,114 @@
       cursor: not-allowed;
       text-shadow: none;
       box-shadow: none;
+      > * {
+        pointer-events: none;
+      }
     }
   }
+}
+// btn 主要 色
+@mixin btn-primary() {
+  @include button-variant($btn-primary-color,$btn-primary-bg);
+}
+// btn 危险 色
+@mixin btn-danger() {
+  @include button-variant($btn-danger-color,$btn-danger-bg);
+}
+// btn 警告 色
+@mixin btn-warning() {
+  @include button-variant($btn-warning-color,$btn-warning-bg);
+}
+// btn 成功 色
+@mixin btn-success() {
+  @include button-variant($btn-success-color,$btn-success-bg);
+}
+// btn 文本 色
+@mixin btn-info() {
+  @include button-variant($btn-info-color,$btn-info-bg);
+}
+// button 可变换函数
+@mixin button-variant($color, $background,$border:$background) {
+  @include button-color($color, $background, $border);
+  &:hover,
+  &:focus,
+  &:active{
+    @include button-color(lighten($color, 5%), lighten($background, 5%), lighten($border, 5%));
+  }
+  @include btn-disabled();
+}
+
+// dashed
+// -------------------------------------------
+// btn 虚线
+@mixin btn-dashed() {
+  border-style: dashed;
+  @include button-variant($black, $transparent, $btn-default-border);
+}
+// btn dashed primary
+@mixin btn-dashed-primary() {
+  border-style: dashed;
+  @include button-variant($primary-color, $transparent, $primary-color);
+}
+// btn dashed danger
+@mixin btn-dashed-danger() {
+  border-style: dashed;
+  @include button-variant($error-color, $transparent, $error-color);
+}
+// btn dashed warning
+@mixin btn-dashed-warning() {
+  border-style: dashed;
+  @include button-variant($warning-color, $transparent, $warning-color);
+}
+// btn dashed success
+@mixin btn-dashed-success() {
+  border-style: dashed;
+  @include button-variant($success-color, $transparent, $success-color);
+}
+// btn dashed info
+@mixin btn-dashed-info() {
+  border-style: dashed;
+  @include button-variant($info-color, $transparent, $info-color);
+}
+
+// link
+// -------------------------------------------
+// btn 超链接
+@mixin btn-link() {
+  box-shadow: none;
+  @include button-variant($primary-color, $transparent, $transparent);
+}
+// btn link danger
+@mixin btn-link-danger() {
+  @include button-variant($error-color, $transparent);
+  @include btn-disabled($disabled-color, $transparent, $transparent);
+}
+// btn link primary
+@mixin btn-link-primary() {
+  @include button-variant($primary-color, $transparent);
+  @include btn-disabled($disabled-color, $transparent, $transparent);
+}
+// btn link warning
+@mixin btn-link-warning() {
+  @include button-variant($warning-color, $transparent);
+  @include btn-disabled($disabled-color, $transparent, $transparent);
+}
+// btn link success
+@mixin btn-link-success() {
+  @include button-variant($success-color, $transparent);
+  @include btn-disabled($disabled-color, $transparent, $transparent);
+}
+// btn link info
+@mixin btn-link-info() {
+  @include button-variant($info-color, $transparent);
+  @include btn-disabled($disabled-color, $transparent, $transparent);
+}
+
+// text
+// -------------------------------------------
+// btn 文本
+@mixin btn-text() {
+  box-shadow: none;
+  @include button-variant($info-color, $transparent, $transparent);
+  @include btn-disabled($disabled-color, $transparent, $transparent);
 }

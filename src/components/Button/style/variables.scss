@@ -19,13 +19,35 @@ $btn-padding-x-sm: 12px;
 $btn-font-size-sm: 12px;
 $btn-border-radius-sm: 2px;
 
-$btn-border-width: $border-width-base;
-$btn-border-style: $border-style-base;
-$btn-line-height: $line-height-base;
-$btn-default-bg: $transparent;
-$btn-default-color: $text-color;
-$btn-default-border: $border-color-base;
-$btn-disable-color: $disabled-color;
-$disabled-bg: $background-color-base;
-$btn-disable-bg: $background-color-base;
-$btn-disable-border: $border-color-base;
+$btn-border-width: $border-width-base; // 按钮边框宽度
+$btn-border-style: $border-style-base; // 按钮默认边框样式
+$btn-line-height: $line-height-base; // 按钮行高
+
+// 按钮颜色
+$btn-default-bg: $transparent; // 按钮默认背景色
+$btn-default-color: $text-color; // 按钮默认文字色
+$btn-default-border: $border-color-base; // 按钮默认边框颜色
+$btn-disable-color: $disabled-color; // 按钮禁用文字色
+$disabled-bg: $background-color-base; // 禁用默认色
+$btn-disable-bg: $background-color-base; // 按钮禁用背景色
+$btn-disable-border: $border-color-base; // 按钮禁用边框颜色
+$btn-shadow: 0 2px 0 rgba(0, 0, 0, 0.015); // 按钮默认阴影色
+
+// link
+$link-color: $primary-color;
+
+// 危险色
+$btn-danger-color: $white; // 按钮危险 字体色
+$btn-danger-bg: $error-color; // 按钮危险 字体色
+// 主要色
+$btn-primary-color: $white; // 主要 字体色
+$btn-primary-bg: $primary-color; // 主要 背景色
+// 警告色
+$btn-warning-color: $white; // 警告 字体色
+$btn-warning-bg: $warning-color; // 警告 背景色
+// 成功色
+$btn-success-color: $white; // 成功 字体色
+$btn-success-bg: $success-color; // 成功 背景色
+// 文本 色
+$btn-info-color: $white; // 文本 字体色
+$btn-info-bg: $info-color; // 文本 背景色
