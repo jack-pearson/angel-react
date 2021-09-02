@@ -1,7 +1,7 @@
 /*
  * @Author: jack-pearson
  * @Date: 2021-08-13 17:38:24
- * @LastEditTime: 2021-09-02 13:20:37
+ * @LastEditTime: 2021-09-02 17:10:34
  * @LastEditors: jack-pearson
  * @FilePath: /angel-ui/src/components/Button/button.stories.tsx
  * @Description: props look https://fontawesome.com/v5.15/how-to-use/on-the-web/using-with/react
@@ -36,6 +36,11 @@ export default {
     size: {
       defaultValue: 'middle',
       control: { type: 'select' },
+    },
+    onClick: {
+      table: {
+        disable: true,
+      },
     },
   },
 } as ComponentMeta<typeof Button>;
