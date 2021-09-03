@@ -1,10 +1,10 @@
 {
   "name": "angel-ui",
-  "version": "0.0.0-beta.0.0.4",
+  "version": "0.0.0-beta.0.0.5",
   "description": "React components libraty",
   "author": {
     "name": "jack-pearson",
-    "email": "qize953463876@qq.com"
+    "email": "qize953463876@gmail.com"
   },
   "license": "MIT",
   "private": false,
