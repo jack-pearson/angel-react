@@ -1,11 +1,11 @@
 /*
  * @Author: jack-pearson
  * @Date: 2021-08-13 16:22:24
- * @LastEditTime: 2021-08-16 19:16:41
+ * @LastEditTime: 2021-09-03 19:19:20
  * @LastEditors: jack-pearson
- * @FilePath: /angel-ui/src/components/icon/index.tsx
+ * @FilePath: /angel-ui/src/components/Icon/index.tsx
  * @Description: export
  */
 import { Icon } from './icon';
-
+Icon.displayName = 'icon';
 export default Icon;

@@ -1,7 +1,7 @@
 /*
  * @Author: jack-pearson
  * @Date: 2021-08-19 20:24:49
- * @LastEditTime: 2021-09-03 19:09:35
+ * @LastEditTime: 2021-09-03 19:19:37
  * @LastEditors: jack-pearson
  * @FilePath: /angel-ui/src/components/Button/button.tsx
  * @Description:
@@ -120,4 +120,3 @@ const BaseButton: React.ForwardRefRenderFunction<HTMLElement, IButtonProps> = (
 };
 
 export const Button = React.forwardRef<HTMLElement, IButtonProps>(BaseButton);
-Button.displayName = 'button';
