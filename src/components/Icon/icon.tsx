@@ -1,7 +1,7 @@
 /*
  * @Author: jack-pearson
  * @Date: 2021-08-13 16:22:24
- * @LastEditTime: 2021-09-03 17:36:34
+ * @LastEditTime: 2021-09-03 17:50:17
  * @LastEditors: jack-pearson
  * @FilePath: /angel-ui/src/components/Icon/icon.tsx
  * @Description:  https://fontawesome.com/v5.15/how-to-use/on-the-web/using-with/react
