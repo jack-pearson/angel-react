@@ -19,6 +19,12 @@ $btn-padding-x-sm: 12px;
 $btn-font-size-sm: 12px;
 $btn-border-radius-sm: 2px;
 
+$btn-circle-size: 40px;
+$btn-circle-size-lg: 48px;
+$btn-circle-size-sm: 32px;
+$btn-circle-padding: 12px; // circle 的默认 padding
+$btn-circle-padding-lg: 15px; // circle 的默认 padding
+$btn-circle-padding-sm: 9px; // circle 的默认 padding
 $btn-border-width: $border-width-base; // 按钮边框宽度
 $btn-border-style: $border-style-base; // 按钮默认边框样式
 $btn-line-height: $line-height-base; // 按钮行高

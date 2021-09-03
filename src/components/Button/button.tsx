@@ -1,7 +1,7 @@
 /*
  * @Author: jack-pearson
  * @Date: 2021-08-19 20:24:49
- * @LastEditTime: 2021-09-02 20:11:55
+ * @LastEditTime: 2021-09-03 17:21:24
  * @LastEditors: jack-pearson
  * @FilePath: /angel-ui/src/components/Button/button.tsx
  * @Description:
@@ -79,6 +79,7 @@ const BaseButton: React.ForwardRefRenderFunction<HTMLElement, IButtonProps> = (
     children,
     disabled = false,
     onClick,
+    icon,
     href,
     ...restProps
   }: IButtonProps,
@@ -103,15 +104,17 @@ const BaseButton: React.ForwardRefRenderFunction<HTMLElement, IButtonProps> = (
   };
   if (type === 'link' && href) {
     return (
-      // @ts-ignore：无法被执行的代码的错误
+      // @ts-ignore：忽略 a 标签上没有 disabled 属性的问题
       <a className={classes} href={href} disabled={disabled} ref={buttonRef} onClick={handleClick} {...restProps}>
-        {children}
+        {icon && <span className="angelicon">{icon}</span>}
+        {children && <span>{children}</span>}
       </a>
     );
   }
   return (
     <button className={classes} type={htmlType} disabled={disabled} ref={buttonRef} {...restProps}>
-      {children}
+      {icon && <span className="angelicon">{icon}</span>}
+      {children && <span>{children}</span>}
     </button>
   );
 };

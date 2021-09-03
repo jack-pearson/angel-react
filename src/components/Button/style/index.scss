@@ -66,4 +66,7 @@ $btn-prefix-cls: '#{$angel-base}-btn';
   &.#{$btn-prefix-cls}-text {
     @include btn-text();
   }
+  &>.angelicon+span, .ant-btn>span+.angelicon{
+    margin-left: 8px;
+  }
 }

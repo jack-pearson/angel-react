@@ -1,7 +1,7 @@
 /*
  * @Author: jack-pearson
  * @Date: 2021-08-13 17:38:24
- * @LastEditTime: 2021-09-02 17:10:34
+ * @LastEditTime: 2021-09-03 16:34:30
  * @LastEditors: jack-pearson
  * @FilePath: /angel-ui/src/components/Button/button.stories.tsx
  * @Description: props look https://fontawesome.com/v5.15/how-to-use/on-the-web/using-with/react
@@ -41,6 +41,14 @@ export default {
       table: {
         disable: true,
       },
+    },
+    icon: {
+      table: {
+        disable: false,
+      },
+      defaultValue: null,
+      description: '此属性不能通过当前页来编辑',
+      control: { type: 'none' },
     },
   },
 } as ComponentMeta<typeof Button>;

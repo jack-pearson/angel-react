@@ -69,15 +69,21 @@
 }
 // btn 正圆
 @mixin btn-circle($btnClassName: btn) {
-  @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, 50%);
+  @include button-size($btn-circle-padding, $btn-circle-padding, $btn-font-size, 50%);
+  width: $btn-circle-size;
+  height: $btn-circle-size;
   &.#{$btnClassName}-lg {
+    width: $btn-circle-size-lg;
+    height: $btn-circle-size-lg;
     @include button-size(
-      $btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, 50%
+      $btn-circle-padding-lg, $btn-circle-padding-lg, $btn-font-size-lg, 50%
     );
   }
   &.#{$btnClassName}-sm {
+    width: $btn-circle-size-sm;
+    height: $btn-circle-size-sm;
     @include button-size(
-      $btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, 50%
+      $btn-circle-padding-sm, $btn-circle-padding-sm, $btn-font-size-sm, 50%
     );
   }
 }
