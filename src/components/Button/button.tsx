@@ -1,7 +1,7 @@
 /*
  * @Author: jack-pearson
  * @Date: 2021-08-19 20:24:49
- * @LastEditTime: 2021-09-03 19:19:37
+ * @LastEditTime: 2021-09-06 14:34:05
  * @LastEditors: jack-pearson
  * @FilePath: /angel-ui/src/components/Button/button.tsx
  * @Description:
@@ -112,7 +112,14 @@ const BaseButton: React.ForwardRefRenderFunction<HTMLElement, IButtonProps> = (
     );
   }
   return (
-    <button className={classes} type={htmlType} disabled={disabled} ref={buttonRef} {...restProps}>
+    <button
+      className={classes}
+      type={htmlType}
+      disabled={disabled}
+      ref={buttonRef}
+      onClick={handleClick}
+      {...restProps}
+    >
       {icon && <span className="angelicon">{icon}</span>}
       {children && <span>{children}</span>}
     </button>
