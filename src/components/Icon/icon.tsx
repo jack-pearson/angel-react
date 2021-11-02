@@ -1,7 +1,7 @@
 /*
  * @Author: jack-pearson
  * @Date: 2021-08-13 16:22:24
- * @LastEditTime: 2021-09-03 19:19:02
+ * @LastEditTime: 2021-11-02 17:17:53
  * @LastEditors: jack-pearson
  * @FilePath: /angel-ui/src/components/Icon/icon.tsx
  * @Description:  https://fontawesome.com/v5.15/how-to-use/on-the-web/using-with/react
@@ -28,7 +28,7 @@ export interface IconProps extends FontAwesomeIconProps {
  * ### 引用方法
  *
  * ~~~js
- * import { Button } from 'angel-ui'
+ * import { Icon } from 'angel-ui'
  * ~~~
  *
  * ### 描述

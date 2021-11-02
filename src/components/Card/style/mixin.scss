@@ -1,0 +1,12 @@
+// mixins for card
+// --------------------------------------------------------------------------------
+@mixin reset-component {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: $text-color;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  width: 200px;
+  list-style: none;
+}

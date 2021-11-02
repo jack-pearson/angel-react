@@ -1,7 +1,7 @@
 /*
  * @Author: jack-pearson
  * @Date: 2021-08-16 10:42:51
- * @LastEditTime: 2021-08-24 11:04:10
+ * @LastEditTime: 2021-11-02 18:04:33
  * @LastEditors: jack-pearson
  * @FilePath: /angel-ui/src/index.tsx
  * @Description:
@@ -14,3 +14,4 @@ library.add(fas, fab, far);
 
 export { default as Icon } from './components/Icon';
 export { default as Button } from './components/Button';
+export { default as Card } from './components/Card';

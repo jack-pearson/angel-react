@@ -1,0 +1,14 @@
+@import 'variables';
+@import 'mixin';
+
+$btn-prefix-cls: '#{$angel-base}-card';
+
+.#{$btn-prefix-cls} {
+  @include reset-component();
+  position: relative;
+  background: $card-background;
+  border-radius: $card-radius;
+  &.#{$btn-prefix-cls}-border{
+    border: 1px solid #f0f0f0;
+  }
+}
