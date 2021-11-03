@@ -1,7 +1,7 @@
 /*
  * @Author: jack-pearson
  * @Date: 2021-08-13 17:38:24
- * @LastEditTime: 2021-11-02 18:49:30
+ * @LastEditTime: 2021-11-03 16:08:48
  * @LastEditors: jack-pearson
  * @FilePath: /angel-ui/src/components/Card/card.stories.tsx
  * @Description: props look https://fontawesome.com/v5.15/how-to-use/on-the-web/using-with/react
@@ -18,6 +18,9 @@ export default {
 const Template: ComponentStory<typeof Card> = (args: ICardProps) => <Card {...args} />;
 
 export const DefaultCard = Template.bind({});
+const a = <a href="http://www.baidu.com">更多</a>;
 DefaultCard.args = {
-  title: '123',
+  title: 'Card title',
+  children: '123',
+  extra: a,
 };

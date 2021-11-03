@@ -1,12 +1,41 @@
 // mixins for card
 // --------------------------------------------------------------------------------
-@mixin reset-component {
+
+/// 默认的 card 样式
+@mixin default-card {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   color: $text-color;
   font-size: $font-size-base;
   line-height: $line-height-base;
-  width: 200px;
+  width: 300px;
   list-style: none;
+  background: $white;
+}
+@mixin card-head {
+  min-height: 48px;
+  line-height: $line-height-base;
+  padding: 0 20px;
+  border-bottom: 1px solid $card-border-color-base;
+  font-size: $card-head-font-size;
+  font-weight: 500;
+  @include clearfix();
+}
+@mixin card-head-wrapper {
+  display: flex;
+  align-items: center;
+}
+@mixin card-head-title {
+  display: inline-block;
+  flex: 1;
+  padding: $card-head-padding 0;
+  @include text-long-omit();
+}
+@mixin card-head-extra {
+  float: right;
+  padding: $card-head-padding 0;
+  margin-left: auto;
+  font-size: $card-head-extra-font-size;
+  font-weight: 400;
 }

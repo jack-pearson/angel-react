@@ -4,11 +4,23 @@
 $btn-prefix-cls: '#{$angel-base}-card';
 
 .#{$btn-prefix-cls} {
-  @include reset-component();
+  @include default-card();
   position: relative;
   background: $card-background;
   border-radius: $card-radius;
-  &.#{$btn-prefix-cls}-border{
-    border: 1px solid #f0f0f0;
+  &-border{
+    border: 1px solid $card-border-color-base;
+  }
+  &-head{
+    @include card-head();
+    &-wrapper{
+      @include card-head-wrapper();
+    }
+    &-title{
+      @include card-head-title();
+    }
+    &-extra{
+      @include card-head-extra();
+    }
   }
 }

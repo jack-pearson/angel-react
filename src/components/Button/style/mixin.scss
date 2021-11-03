@@ -48,7 +48,7 @@
   &:hover,
   &:focus,
   &:active {
-    @include button-color(fade($color, 10%), fade($background, 10%), fade($border, 10%));
+    @include button-color(lighten($color, 15%), lighten($background, 15%), lighten($border, 15%));
     text-decoration: none;
     background: $btn-default-bg;
   }

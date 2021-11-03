@@ -12,10 +12,10 @@ $disabled-color: lighten($black, 75%);
 $ease-in-out: cubic-bezier(0.645, 0.045, 0.355, 1);
 
 /// 颜色
-$text-color: fade($white, 85%);
+$text-color: rgba(0,0,0,0.85);
 $text-color-secondary: lighten($black, 55%);
 $background-color-base: #f5f5f5;
 $border-color-base: hsl(0, 0%, 85%);
 $font-size-base: 12px;
-$line-height-base: 1.66667;
+$line-height-base: 1.5;
 $component-background: $white;
