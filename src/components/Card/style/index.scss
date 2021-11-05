@@ -1,9 +1,9 @@
 @import 'variables';
 @import 'mixin';
 
-$btn-prefix-cls: '#{$angel-base}-card';
+$angel-prefix-cls: '#{$angel-base}-card';
 
-.#{$btn-prefix-cls} {
+.#{$angel-prefix-cls} {
   @include default-card();
   position: relative;
   background: $card-background;

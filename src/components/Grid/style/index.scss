@@ -1,0 +1,5 @@
+$angel-prefix-cls: '#{$angel-base}-grid';
+
+.#{$angel-prefix-cls} {
+  display: grid;
+}
