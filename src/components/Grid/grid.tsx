@@ -1,7 +1,7 @@
 /*
  * @Author: jack-pearson
  * @Date: 2021-11-03 16:40:02
- * @LastEditTime: 2021-11-05 17:29:37
+ * @LastEditTime: 2021-11-05 17:34:41
  * @LastEditors: jack-pearson
  * @FilePath: /angel-ui/src/components/Grid/grid.tsx
  * @Description:
@@ -31,7 +31,6 @@ export const Grid = React.forwardRef<HTMLDivElement, IGridProps>((props, ref) =>
       const childElement = child as React.FunctionComponentElement<IItemProps>;
       const { displayName } = childElement.type;
       const { style: childStyle } = childElement.props;
-      console.log(childElement);
       if (displayName === 'GridItem') {
         return React.cloneElement(childElement, {
           style: childStyle ?? colStyle,
