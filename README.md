@@ -1,3 +1,12 @@
+<!--
+ * @Author: jack-pearson
+ * @Date: 2021-11-05 17:32:55
+ * @LastEditTime: 2021-11-05 18:20:20
+ * @LastEditors: jack-pearson
+ * @FilePath: /angel-ui/README.md
+ * @Description:
+-->
+
 # angel-ui
 
 组件库
@@ -8,4 +17,8 @@
 
 - [x] Icon
 
-- [ ] card
+- [ ] Card
+
+- [x] Grid
+
+- [x] Grid.Item

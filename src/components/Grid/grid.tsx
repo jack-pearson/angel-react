@@ -1,7 +1,7 @@
 /*
  * @Author: jack-pearson
  * @Date: 2021-11-03 16:40:02
- * @LastEditTime: 2021-11-05 17:34:41
+ * @LastEditTime: 2021-11-05 18:36:00
  * @LastEditors: jack-pearson
  * @FilePath: /angel-ui/src/components/Grid/grid.tsx
  * @Description:
@@ -17,14 +17,25 @@ export interface IGridProps {
   rows?: string[];
   cols?: string[];
   areas?: CSSProperties;
-  rowGap?: number;
-  colGap?: number;
+  rowGap?: any;
+  colGap?: any;
   style?: CSSProperties;
   colStyle?: CSSProperties;
 }
 const prefixCls = getPrefixCls('grid');
 export const Grid = React.forwardRef<HTMLDivElement, IGridProps>((props, ref) => {
-  const { className, children, cols, rows, colGap, rowGap, style, colStyle } = props;
+  const {
+    className,
+    children,
+    cols = Array(24)
+      .fill(1)
+      .map(i => '1fr'),
+    rows,
+    colGap,
+    rowGap,
+    style,
+    colStyle,
+  } = props;
   const classes = classNames(prefixCls, className);
   const renderChildren = () => {
     return React.Children.map(children, (child, index) => {
@@ -47,8 +58,8 @@ export const Grid = React.forwardRef<HTMLDivElement, IGridProps>((props, ref) =>
       style={{
         gridTemplateColumns: cols ? cols.join(' ') : '',
         gridTemplateRows: rows ? rows.join(' ') : '',
-        columnGap: colGap + 'px',
-        rowGap: rowGap + 'px',
+        columnGap: colGap,
+        rowGap: rowGap,
         ...style,
       }}
     >

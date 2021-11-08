@@ -23,4 +23,7 @@ $angel-prefix-cls: '#{$angel-base}-card';
       @include card-head-extra();
     }
   }
+  &-loading{
+    padding: 20px;
+  }
 }
