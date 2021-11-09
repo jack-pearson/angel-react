@@ -23,7 +23,45 @@ $angel-prefix-cls: '#{$angel-base}-card';
       @include card-head-extra();
     }
   }
-  &-loading{
+  &-body{
     padding: 20px;
+  }
+  &-cover{
+    > * {
+      display: block;
+      width: 100%;
+    }
+    > img {
+      border-radius: $card-radius $card-radius 0 0;
+    }
+  }
+  &-actions{
+    @include card-actions();
+    & > li{
+      flex: 1;
+      margin: 12px 0;
+      color: $card-actions-color-base;
+      text-align: center;
+      border-right: 1px solid $card-border-color-base;
+      &:not(:last-child){
+        border-right: 0;
+      }
+      & > span{
+        position: relative;
+        display: block;
+        width: 100%;
+        min-width: 32px;
+        text-align: center;
+        cursor: pointer;
+        color: $card-actions-color-base;
+        font-size: $card-head-extra-font-size;
+        font-weight: 500;
+        line-height: $line-height-base;
+        &:hover{
+          color: $primary-color;
+          transition: color 0.3s;
+        }
+      }
+    }
   }
 }

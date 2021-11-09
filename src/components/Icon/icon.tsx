@@ -1,7 +1,7 @@
 /*
  * @Author: jack-pearson
  * @Date: 2021-08-13 16:22:24
- * @LastEditTime: 2021-11-02 17:17:53
+ * @LastEditTime: 2021-11-09 14:26:46
  * @LastEditors: jack-pearson
  * @FilePath: /angel-ui/src/components/Icon/icon.tsx
  * @Description:  https://fontawesome.com/v5.15/how-to-use/on-the-web/using-with/react
@@ -9,7 +9,11 @@
 import React, { FC } from 'react';
 import classNames from 'classnames';
 import { FontAwesomeIcon, FontAwesomeIconProps } from '@fortawesome/react-fontawesome';
-import { IconProp } from '@fortawesome/fontawesome-svg-core';
+import { IconProp, library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import { far } from '@fortawesome/free-regular-svg-icons';
+library.add(fas, fab, far);
 
 export interface IconProps extends FontAwesomeIconProps {
   /** icon  可以是 ['fab', '500px'] 也可以是 'ad' (默认是 soild 格式)*/
@@ -40,6 +44,7 @@ export interface IconProps extends FontAwesomeIconProps {
  *    1. brands: fab
  *    2. regular:far
  *    3. solid: fas
+ * - size 属性,官方的是用  "xs"| "lg"| "sm"| "1x"| "2x"| "3x"| "4x"| "5x"| "6x"| "7x"| "8x"| "9x"| "10x 这种, 但是可以直接设置 style 中的 fontSize, 这样可以更灵活.
  */
 export const Icon: FC<IconProps> = props => {
   const { className, icon, ...restProps } = props;

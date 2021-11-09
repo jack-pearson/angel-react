@@ -1,7 +1,7 @@
 /*
  * @Author: jack-pearson
  * @Date: 2021-10-21 16:36:57
- * @LastEditTime: 2021-11-05 18:36:10
+ * @LastEditTime: 2021-11-09 10:25:40
  * @LastEditors: jack-pearson
  * @FilePath: /angel-ui/src/components/Card/card.tsx
  * @Description:
@@ -20,9 +20,25 @@ export interface ICardProps {
   headStyle?: React.CSSProperties;
   bodyStyle?: React.CSSProperties;
   style?: React.CSSProperties;
+  cover?: React.ReactNode;
+  actions?: React.ReactNode[];
   loading?: boolean;
 }
 const prefixCls = getPrefixCls('card');
+const getAction = (actions: React.ReactNode[]) => {
+  if (!actions || !actions.length) {
+    return null;
+  }
+  const actionList = actions.map((action, index) => {
+    return (
+      <li key={index}>
+        <span>{action}</span>
+      </li>
+    );
+  });
+
+  return actionList;
+};
 export const Card: React.FC<ICardProps> = props => {
   const {
     className,
@@ -32,7 +48,9 @@ export const Card: React.FC<ICardProps> = props => {
     border = true,
     headStyle,
     bodyStyle,
-    loading = true,
+    loading,
+    cover,
+    actions,
     ...restProps
   } = props;
   const classes = classNames(prefixCls, className, {
@@ -77,10 +95,16 @@ export const Card: React.FC<ICardProps> = props => {
       {loading ? loadingNode : children}
     </div>
   );
+
+  const actionDom = actions && <ul className={`${prefixCls}-actions`}>{getAction(actions)}</ul>;
+  const coverDom = cover ? <div className={`${prefixCls}-cover`}>{cover}</div> : null;
+
   return (
     <div className={classes} {...restProps}>
       {head}
+      {coverDom}
       {body}
+      {actionDom}
     </div>
   );
 };

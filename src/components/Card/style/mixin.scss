@@ -39,3 +39,9 @@
   font-size: $card-head-extra-font-size;
   font-weight: 400;
 }
+@mixin card-actions {
+  list-style: none;
+  background: $white;
+  border-top: 1px solid $card-border-color-base;
+  display: flex;
+}
