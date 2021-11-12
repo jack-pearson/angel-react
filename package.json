@@ -1,6 +1,6 @@
 {
   "name": "angel-react",
-  "version": "0.0.0-beta.0.0.5",
+  "version": "0.0.2",
   "description": "React components libraty",
   "author": {
     "name": "jack-pearson",
@@ -85,7 +85,7 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-unicorn": "^35.0.0",
     "husky": "4.2.1",
-    "node-sass": "4.14.1",
+    "node-sass": "6.0.1",
     "prettier": "^2.3.2",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
