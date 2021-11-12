@@ -3,7 +3,7 @@
  * @Date: 2021-11-05 15:19:37
  * @LastEditTime: 2021-11-05 18:34:05
  * @LastEditors: jack-pearson
- * @FilePath: /angel-ui/src/components/Grid/item.tsx
+ * @FilePath: /angel-react/src/components/Grid/item.tsx
  * @Description:
  */
 import React, { CSSProperties } from 'react';

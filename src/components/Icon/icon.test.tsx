@@ -3,7 +3,7 @@
  * @Date: 2021-08-16 15:55:46
  * @LastEditTime: 2021-09-01 11:31:10
  * @LastEditors: jack-pearson
- * @FilePath: /angel-ui/src/components/Icon/icon.test.tsx
+ * @FilePath: /angel-react/src/components/Icon/icon.test.tsx
  * @Description: test Icon component
  */
 import React from 'react';

@@ -3,7 +3,7 @@
  * @Date: 2021-08-13 17:38:24
  * @LastEditTime: 2021-09-01 11:23:50
  * @LastEditors: jack-pearson
- * @FilePath: /angel-ui/src/components/Icon/Icon.stories.tsx
+ * @FilePath: /angel-react/src/components/Icon/Icon.stories.tsx
  * @Description: props look https://fontawesome.com/v5.15/how-to-use/on-the-web/using-with/react
  */
 import React from 'react';

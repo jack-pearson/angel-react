@@ -3,7 +3,7 @@
  * @Date: 2021-08-16 10:42:51
  * @LastEditTime: 2021-08-25 12:01:40
  * @LastEditors: jack-pearson
- * @FilePath: /angel-ui/.storybook/main.js
+ * @FilePath: /angel-react/.storybook/main.js
  * @Description:
  */
 module.exports = {

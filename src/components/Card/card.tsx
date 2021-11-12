@@ -3,7 +3,7 @@
  * @Date: 2021-10-21 16:36:57
  * @LastEditTime: 2021-11-09 17:20:04
  * @LastEditors: jack-pearson
- * @FilePath: /angel-ui/src/components/Card/card.tsx
+ * @FilePath: /angel-react/src/components/Card/card.tsx
  * @Description:
  */
 import React from 'react';

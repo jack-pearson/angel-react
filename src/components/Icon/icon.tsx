@@ -3,7 +3,7 @@
  * @Date: 2021-08-13 16:22:24
  * @LastEditTime: 2021-11-09 14:26:46
  * @LastEditors: jack-pearson
- * @FilePath: /angel-ui/src/components/Icon/icon.tsx
+ * @FilePath: /angel-react/src/components/Icon/icon.tsx
  * @Description:  https://fontawesome.com/v5.15/how-to-use/on-the-web/using-with/react
  */
 import React, { FC } from 'react';
@@ -32,7 +32,7 @@ export interface IconProps extends FontAwesomeIconProps {
  * ### 引用方法
  *
  * ~~~js
- * import { Icon } from 'angel-ui'
+ * import { Icon } from 'angel-react'
  * ~~~
  *
  * ### 描述

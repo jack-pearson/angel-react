@@ -3,7 +3,7 @@
  * @Date: 2021-08-19 20:24:49
  * @LastEditTime: 2021-09-06 14:34:05
  * @LastEditors: jack-pearson
- * @FilePath: /angel-ui/src/components/Button/button.tsx
+ * @FilePath: /angel-react/src/components/Button/button.tsx
  * @Description:
  */
 import classNames from 'classnames';
@@ -54,7 +54,7 @@ export type IButtonProps = Partial<NativeButtonProps & AnchorButtonProps>;
  * ### 引用方法
  *
  * ~~~js
- * import { Button } from 'angel-ui'
+ * import { Button } from 'angel-react'
  * ~~~
  */
 function formatSize(size: IBaseButtonProps['size']) {

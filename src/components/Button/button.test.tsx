@@ -3,7 +3,7 @@
  * @Date: 2021-09-06 13:41:55
  * @LastEditTime: 2021-09-06 15:10:48
  * @LastEditors: jack-pearson
- * @FilePath: /angel-ui/src/components/Button/button.test.tsx
+ * @FilePath: /angel-react/src/components/Button/button.test.tsx
  * @Description: 测试 button
  */
 

@@ -3,7 +3,7 @@
  * @Date: 2021-11-03 16:40:02
  * @LastEditTime: 2021-11-09 14:41:36
  * @LastEditors: jack-pearson
- * @FilePath: /angel-ui/src/components/Grid/grid.tsx
+ * @FilePath: /angel-react/src/components/Grid/grid.tsx
  * @Description:
  */
 import React, { CSSProperties } from 'react';
@@ -34,7 +34,7 @@ const prefixCls = getPrefixCls('grid');
  * ### 引用方法
  *
  * ~~~js
- * import { Grid } from 'angel-ui'
+ * import { Grid } from 'angel-react'
  * ~~~
  *
  * ### 描述

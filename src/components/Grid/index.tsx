@@ -3,7 +3,7 @@
  * @Date: 2021-11-03 16:57:06
  * @LastEditTime: 2021-11-09 14:31:30
  * @LastEditors: jack-pearson
- * @FilePath: /angel-ui/src/components/Grid/index.tsx
+ * @FilePath: /angel-react/src/components/Grid/index.tsx
  * @Description:
  */
 import { FC, ForwardRefExoticComponent, RefAttributes } from 'react';

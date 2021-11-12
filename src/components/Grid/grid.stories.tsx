@@ -3,7 +3,7 @@
  * @Date: 2021-08-13 17:38:24
  * @LastEditTime: 2021-11-09 17:05:15
  * @LastEditors: jack-pearson
- * @FilePath: /angel-ui/src/components/Grid/grid.stories.tsx
+ * @FilePath: /angel-react/src/components/Grid/grid.stories.tsx
  * @Description: props look https://fontawesome.com/v5.15/how-to-use/on-the-web/using-with/react
  */
 import React from 'react';

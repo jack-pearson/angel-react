@@ -3,7 +3,7 @@
  * @Date: 2021-08-16 10:42:51
  * @LastEditTime: 2021-08-25 12:01:57
  * @LastEditors: jack-pearson
- * @FilePath: /angel-ui/.storybook/preview.js
+ * @FilePath: /angel-react/.storybook/preview.js
  * @Description:
  */
 import '../src/styles/index.scss';

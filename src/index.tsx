@@ -1,9 +1,9 @@
 /*
  * @Author: jack-pearson
  * @Date: 2021-08-16 10:42:51
- * @LastEditTime: 2021-11-09 17:06:42
+ * @LastEditTime: 2021-11-12 16:49:59
  * @LastEditors: jack-pearson
- * @FilePath: /angel-ui/src/index.tsx
+ * @FilePath: /angel-react/src/index.tsx
  * @Description:
  */
 export { default as Icon } from './components/Icon';

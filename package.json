@@ -1,5 +1,5 @@
 {
-  "name": "angel-ui",
+  "name": "angel-react",
   "version": "0.0.0-beta.0.0.5",
   "description": "React components libraty",
   "author": {
@@ -16,13 +16,13 @@
     "UI",
     "React"
   ],
-  "homepage": "https://jack-pearson.github.io/angel-ui/",
+  "homepage": "https://jack-pearson.github.io/angel-react/",
   "bugs": {
-    "url": "https://github.com/jack-pearson/angel-ui/issues"
+    "url": "https://github.com/jack-pearson/angel-react/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jack-pearson/angel-ui"
+    "url": "https://github.com/jack-pearson/angel-react"
   },
   "files": [
     "dist"

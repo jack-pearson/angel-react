@@ -3,11 +3,11 @@
  * @Date: 2021-11-05 17:32:55
  * @LastEditTime: 2021-11-05 18:20:20
  * @LastEditors: jack-pearson
- * @FilePath: /angel-ui/README.md
+ * @FilePath: /angel-react/README.md
  * @Description:
 -->
 
-# angel-ui
+# angel-react
 
 组件库
 
